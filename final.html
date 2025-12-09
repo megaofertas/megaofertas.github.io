@@ -1,8 +1,32 @@
-<script>
-// Este archivo se ve como "backend" a TikTok.
-// No contiene deep links → TikTok NO lo bloquea.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Abriendo WhatsApp…</title>
 
-setTimeout(() => {
-    window.location.href = "./final.html";
-}, 10);
+<style>
+body {
+    background: #000;
+    margin: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial;
+}
+</style>
+
+<script>
+// TikTok NO permite abrir canales directamente.
+// PERO sí permite abrir un chat desde Safari.
+// Y desde el chat tú mandas el link al canal.
+
+window.location.href = "https://api.whatsapp.com/send?phone=526671234567&text=Quiero%20entrar%20al%20canal";
+
 </script>
+</head>
+<body>
+<h2>Abriendo WhatsApp…</h2>
+</body>
+</html>
