@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar al Canal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEGA OFERTAS</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        button {
-            margin-top: 30px;
-            padding: 18px 35px;
-            background-color: #25D366;
-            border: none;
-            color: white;
-            border-radius: 8px;
-            font-size: 20px;
-        }
-    </style>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1d1d1d);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-    <script>
-        function salirTikTok() {
-            // Este archivo NO debe contener nada de WhatsApp.
-            // Solo abre otra pestaña en Safari/Chrome.
-            window.open(
-                "https://megaofertas.github.io/salida.html",
-                "_blank"
-            );
-        }
-    </script>
+.container {
+    max-width: 420px;
+    width: 90%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.4);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    background-color: #25D366;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1ebe5d;
+}
+</style>
+
+<script>
+function continuar() {
+    // Archivo limpio para salir de TikTok
+    window.location.href = "./redirect.js";
+}
+</script>
+
 </head>
 <body>
 
-    <h1>Entrar al Canal MEGA OFERTAS</h1>
-    <p>Toca el botón para continuar.</p>
-
-    <button onclick="salirTikTok()">Continuar</button>
+<div class="container">
+    <h1>MEGA OFERTAS</h1>
+    <p>Haz clic para continuar al canal exclusivo.</p>
+    <button onclick="continuar()">CONTINUAR</button>
+</div>
 
 </body>
 </html>
