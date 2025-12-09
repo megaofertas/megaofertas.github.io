@@ -3,31 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirigiendo al Canal…</title>
-
-    <script>
-        // Enlace de tu canal de WhatsApp
-        const canal = "https://whatsapp.com/channel/0029VbBF6Bc7DAWvQL2T9c1o";
-
-        // Intenta abrir directamente la app
-        window.location.href = "whatsapp://channel/0029VbBF6Bc7DAWvQL2T9c1o";
-
-        // Si la app no abre en 800ms, abre el enlace web
-        setTimeout(() => {
-            window.location.href = canal;
-        }, 800);
-    </script>
+    <title>Abrir Canal MEGA OFERTAS</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
+            background: #ffffff;
             text-align: center;
-            padding: 50px;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #222;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        button {
+            margin-top: 35px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1ebe5d;
         }
     </style>
 </head>
 <body>
-    <h2>Abriendo el canal de MEGA OFERTAS…</h2>
-    <p>Si no abre automáticamente, <a href="https://whatsapp.com/channel/0029VbBF6Bc7DAWvQL2T9c1o">haz clic aquí</a>.</p>
+
+    <h1>Entrar al Canal MEGA OFERTAS</h1>
+    <p>Toca el botón para abrir el canal en WhatsApp.</p>
+
+    <button onclick="abrirCanal()">Abrir Canal</button>
+
+    <script>
+        function abrirCanal() {
+            // Deep link directo a la app (TikTok sí lo permite al ser user gesture)
+            window.location.href = "whatsapp://channel/0029VbBF6Bc7DAWvQL2T9c1o";
+
+            // Backup por si la app no abre:
+            setTimeout(() => {
+                window.location.href = "https://whatsapp.com/channel/0029VbBF6Bc7DAWvQL2T9c1o";
+            }, 1200);
+        }
+    </script>
+
 </body>
 </html>
