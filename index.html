@@ -1,127 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ofertas Virales MX</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="description" content="Cupones y ofertas virales de las mejores tiendas de México">
-<meta property="og:title" content="Ofertas Virales MX">
-<meta property="og:description" content="Únete a nuestros canales de WhatsApp y no te pierdas ninguna oferta">
-<meta property="og:type" content="website">
+  <title>Ofertas Virales MX</title>
 
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    background: #0f0f1a;
-    color: #ffffff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+  <meta name="description" content="Cupones y ofertas reales directo a tu WhatsApp. Sin spam. Sin ruido." />
+  <meta property="og:title" content="Ofertas Virales MX" />
+  <meta property="og:description" content="Únete al canal y recibe ofertas reales directo en WhatsApp." />
+  <meta property="og:type" content="website" />
 
-.container {
-    width: 100%;
-    max-width: 420px;
-    padding: 32px 24px;
-    text-align: center;
-}
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-h1 {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
-    font-weight: 800;
-}
-
-p {
-    font-size: 1rem;
-    opacity: 0.85;
-    margin-bottom: 28px;
-}
-
-.card {
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 18px;
-    padding: 18px;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card span {
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.card a {
-    background: #25D366;
-    color: #000;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.note {
-    font-size: 0.85rem;
-    opacity: 0.65;
-    margin-top: 22px;
-}
-</style>
+  <!-- Custom Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkbg: '#0b0c10',
+            card: '#15161c',
+            accent: '#25D366'
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body>
-<div class="container">
+<body class="bg-darkbg text-white min-h-screen flex items-center justify-center px-4">
 
-    <h1>Ofertas Virales MX</h1>
+  <main class="w-full max-w-md">
 
-    <p>
-        Canales oficiales de cupones y ofertas.
-        <br>
-        Únete y recibe promociones directo en WhatsApp.
-    </p>
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-3xl font-extrabold tracking-tight mb-3">
+        Ofertas Virales MX
+      </h1>
+      <p class="text-white/70 text-base leading-relaxed">
+        Cupones reales.<br>
+        Sin spam.<br>
+        Directo a tu WhatsApp.
+      </p>
+    </header>
 
-    <!-- CANAL MERCADO LIBRE -->
-    <div class="card">
-        <span>Canal Mercado Libre</span>
-        <a href="https://whatsapp.com/channel/0029VbBF6Bc7DAWvQL2T9c1o"
-           target="_blank"
-           rel="noopener noreferrer">
-           Unirme
-        </a>
-    </div>
+    <!-- CTA WhatsApp -->
+    <section class="mb-8">
+      <a href="https://whatsapp.com/channel/0029VbBF6Bc7DAWvQL2T9c1o"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="block w-full text-center bg-accent text-black font-extrabold text-lg py-5 rounded-2xl shadow-lg shadow-green-500/20 active:scale-95 transition-transform">
+        Entrar al Canal de WhatsApp
+      </a>
+    </section>
 
-    <!-- CANAL PERFUMES -->
-    <div class="card">
-        <span>Canal de Perfumes</span>
-        <a href="https://whatsapp.com/channel/0029VayCNUbKGGGDyqgZ161P"
-           target="_blank"
-           rel="noopener noreferrer">
-           Unirme
-        </a>
-    </div>
+    <!-- Social Cards -->
+    <section class="space-y-4">
 
-    <!-- CANAL OFERTAS GENERALES -->
-    <div class="card">
-        <span>Canal de Ofertas</span>
-        <a href="https://whatsapp.com/channel/0029Vb5zS1Y6rsQpCcvO2k2q"
-           target="_blank"
-           rel="noopener noreferrer">
-           Unirme
-        </a>
-    </div>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/megaofertascanal?igsh=NDc4eWM5dW15d3Fl&utm_source=qr"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="flex items-center justify-between bg-card border border-white/10 rounded-xl px-5 py-4 hover:border-white/20 transition">
+        <span class="font-semibold">Instagram</span>
+        <span class="text-white/60 text-sm">Ver ofertas</span>
+      </a>
 
-    <div class="note">
-        ⚠️ Si estás dentro de TikTok, Instagram o Facebook y no abre WhatsApp:
-        <br>
-        toca <strong>⋮</strong> y selecciona <strong>“Abrir en navegador”</strong>.
-    </div>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@numbs12?_r=1&_t=ZS-92Gw7giXfoS"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="flex items-center justify-between bg-card border border-white/10 rounded-xl px-5 py-4 hover:border-white/20 transition">
+        <span class="font-semibold">TikTok</span>
+        <span class="text-white/60 text-sm">Videos virales</span>
+      </a>
 
-</div>
+    </section>
+
+    <!-- Helper -->
+    <footer class="text-center text-xs text-white/50 mt-10 leading-relaxed">
+      Si no abre WhatsApp desde Instagram o TikTok:<br>
+      toca <strong>⋮</strong> y elige <strong>“Abrir en navegador”</strong>
+    </footer>
+
+  </main>
+
 </body>
 </html>
