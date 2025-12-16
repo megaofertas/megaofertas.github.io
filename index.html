@@ -103,32 +103,36 @@
   </div>
 
   <!-- SCRIPT -->
-  <script>
-    (function () {
-      const ua = navigator.userAgent || "";
-      const isInApp =
-        ua.includes("Instagram") ||
-        ua.includes("FBAN") ||
-        ua.includes("FBAV") ||
-        ua.includes("TikTok");
+<script>
+(function () {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-      const overlay = document.getElementById("inAppOverlay");
+  // Detect common in-app behaviors (NOT userAgent text)
+  const isLikelyInApp =
+    document.referrer.includes("instagram.com") ||
+    document.referrer.includes("tiktok.com") ||
+    document.referrer.includes("facebook.com");
 
-      if (isInApp && overlay) {
-        overlay.classList.remove("hidden");
+  const overlay = document.getElementById("inAppOverlay");
 
-        // Auto hide after 6 seconds
-        setTimeout(() => {
-          overlay.classList.add("hidden");
-        }, 6000);
+  if (isMobile && overlay) {
+    // mostramos SIEMPRE en móvil
+    overlay.classList.remove("hidden");
 
-        // Hide on tap
-        overlay.addEventListener("click", () => {
-          overlay.classList.add("hidden");
-        });
-      }
-    })();
-  </script>
+    // si NO es in-app, se oculta rápido
+    if (!isLikelyInApp) {
+      setTimeout(() => overlay.classList.add("hidden"), 2500);
+    } else {
+      // si ES in-app, se queda más tiempo
+      setTimeout(() => overlay.classList.add("hidden"), 7000);
+    }
+
+    overlay.addEventListener("click", () => {
+      overlay.classList.add("hidden");
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
