@@ -11,7 +11,7 @@
   <meta property="og:description" content="Únete al canal y recibe ofertas reales directo en WhatsApp." />
   <meta property="og:type" content="website" />
 
-  <!-- Tailwind -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -44,6 +44,7 @@
       </p>
     </header>
 
+    <!-- WhatsApp CTA -->
     <section class="mb-8">
       <a href="https://whatsapp.com/channel/0029VbBF6Bc7DAWvQL2T9c1o"
          target="_blank"
@@ -53,6 +54,7 @@
       </a>
     </section>
 
+    <!-- Social Links -->
     <section class="space-y-4">
       <a href="https://www.instagram.com/megaofertascanal?igsh=NDc4eWM5dW15d3Fl&utm_source=qr"
          target="_blank"
@@ -71,17 +73,17 @@
 
   </main>
 
-  <!-- OVERLAY IN-APP -->
+  <!-- OVERLAY UX -->
   <div id="inAppOverlay"
        class="fixed inset-0 z-50 hidden">
 
-    <!-- Blur background -->
-    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <!-- Fondo -->
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
 
-    <!-- Helper content -->
+    <!-- Contenido -->
     <div class="absolute top-3 right-3 flex flex-col items-end gap-3 text-right text-white">
 
-      <!-- Animated arrow -->
+      <!-- Flecha -->
       <svg class="w-10 h-10 animate-bounce"
            fill="none"
            stroke="currentColor"
@@ -91,48 +93,53 @@
               d="M12 19V5m0 0l-5 5m5-5l5 5"/>
       </svg>
 
-      <!-- Message -->
-      <div class="bg-black/80 backdrop-blur px-4 py-3 rounded-xl max-w-[240px] text-sm font-semibold">
-        Para entrar al canal:<br>
-        toca los <strong>3 puntos</strong><br>
-        y elige<br>
-        <span class="text-accent font-bold">“Abrir en navegador”</span>
+      <!-- Caja -->
+      <div class="bg-black/85 backdrop-blur px-4 py-4 rounded-xl max-w-[260px] text-sm font-semibold leading-relaxed">
+        <p class="mb-3">
+          Para entrar al canal de WhatsApp:
+          toca los <strong>3 puntos</strong> y elige
+          <span class="text-accent font-bold">“Abrir en navegador”</span>
+        </p>
+
+        <button id="closeOverlay"
+                class="w-full bg-accent text-black py-2 rounded-lg font-bold text-sm active:scale-95 transition">
+          Entendido
+        </button>
       </div>
 
     </div>
   </div>
 
   <!-- SCRIPT -->
-<script>
-(function () {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  <script>
+    (function () {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      const ref = document.referrer || "";
+      const isInApp =
+        ref.includes("instagram.com") ||
+        ref.includes("tiktok.com") ||
+        ref.includes("facebook.com");
 
-  // Detect common in-app behaviors (NOT userAgent text)
-  const isLikelyInApp =
-    document.referrer.includes("instagram.com") ||
-    document.referrer.includes("tiktok.com") ||
-    document.referrer.includes("facebook.com");
+      const overlay = document.getElementById("inAppOverlay");
+      const closeBtn = document.getElementById("closeOverlay");
 
-  const overlay = document.getElementById("inAppOverlay");
+      if (!isMobile || !overlay) return;
 
-  if (isMobile && overlay) {
-    // mostramos SIEMPRE en móvil
-    overlay.classList.remove("hidden");
+      overlay.classList.remove("hidden");
 
-    // si NO es in-app, se oculta rápido
-    if (!isLikelyInApp) {
-      setTimeout(() => overlay.classList.add("hidden"), 2500);
-    } else {
-      // si ES in-app, se queda más tiempo
-      setTimeout(() => overlay.classList.add("hidden"), 7000);
-    }
+      // Auto hide after 30s
+      const autoHide = setTimeout(() => {
+        overlay.classList.add("hidden");
+      }, 30000);
 
-    overlay.addEventListener("click", () => {
-      overlay.classList.add("hidden");
-    });
-  }
-})();
-</script>
+      if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          clearTimeout(autoHide);
+          overlay.classList.add("hidden");
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>
