@@ -1,133 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ofertas Virales MX</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ofertas Virales MX</title>
 
-  <!-- IMPORTANTE: no metas scripts -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
 
-    .container {
-      width: 100%;
-      max-width: 420px;
-      text-align: center;
-    }
+.logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  background: url("https://ofertasvirales.mx/assets/logo.png") center / cover no-repeat;
+}
 
-    .logo {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      margin: 0 auto 20px;
-      background: url("logo.png") center/cover no-repeat;
-    }
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      font-weight: 700;
-    }
+p {
+  margin: 10px 0 28px;
+  font-size: 15px;
+  opacity: 0.9;
+}
 
-    p {
-      opacity: 0.9;
-      margin: 10px 0 30px;
-      font-size: 15px;
-      line-height: 1.4;
-    }
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
 
-    /* BOTONES — CLAVE: <a> LIMPIO */
-    .link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 20px;
-      margin-bottom: 14px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 500;
-    }
+.link:active {
+  background: rgba(255,255,255,0.22);
+}
 
-    .link:active {
-      background: rgba(255,255,255,0.22);
-    }
+.icon {
+  width: 28px;
+  height: 28px;
+}
 
-    .icon {
-      width: 32px;
-      height: 32px;
-    }
-
-    .footer {
-      margin-top: 25px;
-      font-size: 13px;
-      opacity: 0.7;
-    }
-  </style>
+.footer {
+  margin-top: 22px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- LOGO -->
-    <div class="logo"></div>
+  <div class="logo"></div>
 
-    <!-- TEXTO -->
-    <h1>Ofertas Virales MX</h1>
-    <p>
-      Comunidad de cupones y ofertas reales.<br>
-      Únete a nuestros canales oficiales.
-    </p>
+  <h1>Ofertas Virales MX</h1>
+  <p>
+    Comunidad de cupones y ofertas reales en México.<br>
+    Únete al canal oficial.
+  </p>
 
-    <!-- LINKS WHATSAPP — DIRECTOS -->
-    <a class="link"
-       href="https://whatsapp.com/channel/0029Va9rGRjAu3aMSKuXnI32">
-      Canal de Cupones
-      <img class="icon" src="whatsapp.png" alt="WhatsApp">
-    </a>
+  <!-- WHATSAPP CANAL REAL -->
+  <a class="link"
+     href="https://whatsapp.com/channel/0029Va9rGRjAu3aMSKuXnI32">
+    Canal de Cupones y Ofertas
+    <!-- ÍCONO WHATSAPP SVG OFICIAL -->
+    <svg class="icon" viewBox="0 0 32 32" fill="#25D366" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.11 17.18c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.35-.8-.71-1.34-1.6-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.14.18 1.91 2.92 4.63 4.09.65.28 1.15.45 1.54.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+      <path d="M16.02 3C8.84 3 3 8.84 3 16.02c0 2.82.74 5.58 2.14 8.01L3 29l5.14-2.1A13.01 13.01 0 0 0 16.02 29C23.2 29 29 23.2 29 16.02 29 8.84 23.2 3 16.02 3zm0 23.86c-2.39 0-4.73-.63-6.78-1.83l-.48-.28-3.05 1.25 1.27-2.97-.31-.5a10.87 10.87 0 0 1-1.68-5.49c0-6 4.88-10.88 10.88-10.88S26.9 11.04 26.9 17.04c0 6-4.88 10.82-10.88 10.82z"/>
+    </svg>
+  </a>
 
-    <a class="link"
-       href="https://whatsapp.com/channel/XXXXXXXXXXXX">
-      Canal de Perfumes
-      <img class="icon" src="whatsapp.png" alt="WhatsApp">
-    </a>
+  <!-- FACEBOOK -->
+  <a class="link"
+     href="https://www.facebook.com/">
+    Página de Facebook
+    <!-- ÍCONO FACEBOOK SVG OFICIAL -->
+    <svg class="icon" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/>
+    </svg>
+  </a>
 
-    <a class="link"
-       href="https://whatsapp.com/channel/YYYYYYYYYYYY">
-      Canal de Ofertas
-      <img class="icon" src="whatsapp.png" alt="WhatsApp">
-    </a>
-
-    <!-- FACEBOOK -->
-    <a class="link"
-       href="https://facebook.com/tu_pagina">
-      Página de Facebook
-      <img class="icon" src="facebook.png" alt="Facebook">
-    </a>
-
-    <div class="footer">
-      Abre directo desde TikTok
-    </div>
-
+  <div class="footer">
+    Funciona directo desde TikTok (iPhone)
   </div>
+
+</div>
 </body>
 </html>
