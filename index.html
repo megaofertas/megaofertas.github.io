@@ -46,7 +46,7 @@
             object-fit: cover;
         }
 
-        /* Fallback animated gradient for browsers that can't load video */
+        /* Fallback animated gradient */
         .gradient-fallback {
             position: fixed;
             top: 0;
@@ -63,6 +63,148 @@
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+        /* Browser Hint Overlay - NUEVO */
+        .browser-hint-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 80px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .browser-hint-overlay.active {
+            display: flex;
+        }
+
+        .hint-content {
+            text-align: center;
+            padding: 30px;
+            max-width: 400px;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hint-arrow {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 60px;
+            color: #FFD700;
+            animation: bounceArrow 1.5s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+        }
+
+        @keyframes bounceArrow {
+            0%, 100% {
+                transform: translate(0, 0) rotate(-45deg);
+            }
+            50% {
+                transform: translate(10px, -10px) rotate(-45deg);
+            }
+        }
+
+        .hint-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        .hint-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #FFD700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hint-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .hint-steps {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hint-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .hint-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background: #FFD700;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .close-hint-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .close-hint-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
         }
 
         /* Container */
@@ -275,6 +417,24 @@
                 font-size: 14px;
                 padding: 15px;
             }
+
+            .hint-content {
+                padding: 20px;
+            }
+
+            .hint-title {
+                font-size: 22px;
+            }
+
+            .hint-text {
+                font-size: 16px;
+            }
+
+            .hint-arrow {
+                font-size: 50px;
+                top: 15px;
+                right: 15px;
+            }
         }
 
         /* Floating hearts animation */
@@ -318,6 +478,33 @@
         <video autoplay muted loop playsinline id="bgVideo">
             <source src="https://cdn.pixabay.com/video/2022/12/09/142362-780162710_large.mp4" type="video/mp4">
         </video>
+    </div>
+
+    <!-- Browser Hint Overlay - NUEVO -->
+    <div class="browser-hint-overlay" id="browserHint">
+        <div class="hint-arrow">↗</div>
+        <div class="hint-content">
+            <div class="hint-icon">🌐</div>
+            <h2 class="hint-title">¡Abre en tu Navegador!</h2>
+            <p class="hint-text">Para acceder a las ofertas, necesitas abrir esta página en Safari o Chrome</p>
+            
+            <div class="hint-steps">
+                <div class="hint-step">
+                    <div class="step-number">1</div>
+                    <div>Toca los 3 puntos <strong>arriba a la derecha</strong> ↗</div>
+                </div>
+                <div class="hint-step">
+                    <div class="step-number">2</div>
+                    <div>Selecciona <strong>"Abrir en Safari"</strong> o <strong>"Abrir en navegador"</strong></div>
+                </div>
+                <div class="hint-step">
+                    <div class="step-number">3</div>
+                    <div>¡Listo! Accede a todas las ofertas</div>
+                </div>
+            </div>
+
+            <button class="close-hint-btn" onclick="closeHint()">Entendido</button>
+        </div>
     </div>
 
     <!-- Floating Hearts -->
@@ -378,12 +565,55 @@
     </div>
 
     <script>
+        // Detectar si está dentro de una app (TikTok, Instagram, Facebook)
+        function isInAppBrowser() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // Detectar TikTok
+            if (ua.indexOf('TikTok') > -1 || ua.indexOf('musical_ly') > -1) {
+                return true;
+            }
+            
+            // Detectar Instagram
+            if (ua.indexOf('Instagram') > -1) {
+                return true;
+            }
+            
+            // Detectar Facebook
+            if (ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1) {
+                return true;
+            }
+            
+            return false;
+        }
+
+        // Mostrar el hint si está en app browser
+        function showBrowserHint() {
+            if (isInAppBrowser()) {
+                // Verificar si ya vio el hint en esta sesión
+                if (!sessionStorage.getItem('hintShown')) {
+                    setTimeout(() => {
+                        document.getElementById('browserHint').classList.add('active');
+                        sessionStorage.setItem('hintShown', 'true');
+                    }, 1000); // Mostrar después de 1 segundo
+                }
+            }
+        }
+
+        // Cerrar el hint
+        function closeHint() {
+            document.getElementById('browserHint').classList.remove('active');
+        }
+
         // Ensure video plays on mobile
         document.addEventListener('DOMContentLoaded', function() {
             const video = document.getElementById('bgVideo');
             video.play().catch(function(error) {
                 console.log('Video autoplay failed:', error);
             });
+
+            // Mostrar hint si es necesario
+            showBrowserHint();
         });
 
         // Add interaction to help video play on iOS
