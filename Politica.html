@@ -1,1 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Política de Privacidad | MegaOfertas</title>
+  <meta name="description" content="Política de Privacidad de MegaOfertas" />
+  <style>
+    :root{
+      --bg1:#0b1220;
+      --bg2:#070a12;
+      --card:#0f1a2b;
+      --text:#e8eefc;
+      --muted:#a8b3cf;
+      --accent:#7c3aed;
+      --accent2:#22c55e;
+      --shadow:0 20px 50px rgba(0,0,0,.45);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(124,58,237,.30), transparent 60%),
+        radial-gradient(800px 500px at 90% 10%, rgba(34,197,94,.20), transparent 55%),
+        linear-gradient(180deg,var(--bg1),var(--bg2));
+      min-height:100vh;
+    }
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:40px 18px 60px;
+    }
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0;
+      font-size:1.6rem;
+    }
+    .badge{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.06);
+      font-size:.9rem;
+      color:var(--muted);
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:var(--accent2);
+      box-shadow:0 0 0 4px rgba(34,197,94,.2);
+    }
+    .card{
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:var(--shadow);
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+    }
+    .content{
+      padding:24px;
+      background:linear-gradient(180deg,rgba(15,26,43,.92),rgba(12,22,38,.95));
+      border-radius:var(--radius);
+    }
+    p{
+      margin:0;
+      line-height:1.7;
+      color:var(--muted);
+      font-size:1rem;
+    }
+    footer{
+      margin-top:16px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+    a{color:#c4b5fd;text-decoration:none}
+    a:hover{text-decoration:underline}
+  </style>
+</head>
 
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Política de Privacidad</h1>
+      <div class="badge">
+        <span class="dot"></span>
+        Privacidad & Seguridad
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="content">
+        <p>
+          MegaOfertas es una aplicación que utiliza permisos autorizados de Instagram 
+          exclusivamente para publicar contenido de forma automatizada en cuentas del usuario. No recopilamos,
+          almacenamos ni vendemos información personal sensible, contraseñas, mensajes privados ni datos ajenos 
+          al proceso de publicación. El acceso se limita a los permisos estrictamente necesarios otorgados por el
+          propio usuario, los cuales pueden revocarse en cualquier momento desde la configuración de Instagram. 
+          La aplicación puede generar registros técnicos mínimos con fines operativos y de seguridad. 
+          El uso de MegaOfertas implica la aceptación de esta política, y cualquier cambio será reflejado en esta misma página.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <span>Contacto: <a href="mailto:contacto@magomegaofertas.com">contacto@magomegaofertas.com</a></span>
+      <span>© <span id="year"></span> MegaOfertas</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+        <section id="permisos">
+          <h2>4) Permisos de Instagram</h2>
+          <p>
+            La App solicita permisos de Instagram únicamente con el objetivo de <b>publicar</b> y, si aplica, administrar
+            elementos necesarios para esa publicación.
+          </p>
+          <div class="panel">
+            <p style="margin:0">
+              <b>Importante:</b> No usamos permisos para leer tus mensajes privados ni para extraer información personal no relacionada con la publicación.
+            </p>
+          </div>
+        </section>
+
+        <section id="terceros">
+          <h2>5) Servicios de terceros</h2>
+          <p>
+            Podemos usar infraestructura o servicios de terceros para operar la App (por ejemplo, hosting o herramientas de mensajería/API).
+            Estos proveedores procesan datos <b>solo</b> para brindar el servicio y bajo medidas de seguridad razonables.
+          </p>
+          <ul>
+            <li>No compartimos tu información con terceros para fines de marketing sin tu consentimiento.</li>
+            <li>Si integras servicios externos (por ejemplo, WhatsApp/Email/API), su uso puede regirse por sus propias políticas.</li>
+          </ul>
+        </section>
+
+        <section id="seguridad">
+          <h2>6) Seguridad</h2>
+          <p>
+            Aplicamos medidas razonables para proteger la información (por ejemplo, control de acceso, rotación de credenciales, y prácticas de seguridad).
+            Aun así, ningún sistema es 100% infalible.
+          </p>
+        </section>
+
+        <section id="retencion">
+          <h2>7) Retención y eliminación</h2>
+          <p>
+            Retenemos la información el tiempo mínimo necesario para operar la App y cumplir con obligaciones técnicas/legales.
+            Puedes solicitar la eliminación de datos y revocar permisos desde Instagram cuando corresponda.
+          </p>
+        </section>
+
+        <section id="derechos">
+          <h2>8) Tus derechos</h2>
+          <p>De acuerdo con la normativa aplicable, puedes:</p>
+          <ul>
+            <li>Solicitar acceso, corrección o eliminación de información (si aplica).</li>
+            <li>Revocar permisos otorgados a la App desde la configuración de Instagram.</li>
+            <li>Solicitar soporte o aclaraciones sobre el uso de datos.</li>
+          </ul>
+        </section>
+
+        <section id="contacto">
+          <h2>9) Contacto</h2>
+          <p>
+            Si tienes dudas o solicitudes relacionadas con privacidad, contáctanos:
+          </p>
+          <div class="panel">
+            <p style="margin:0">
+              <b>Email:</b> <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a><br/>
+              <b>Responsable:</b> MegaOfertas
+            </p>
+          </div>
+        </section>
+
+        <div class="hr"></div>
+
+        <footer>
+          <span class="pill">📌 Documento informativo</span>
+          <span>© <span id="year"></span> MegaOfertas</span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
