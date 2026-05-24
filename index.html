@@ -8,7 +8,7 @@
   <meta name="keywords" content="ofertas, mercadolibre, descuentos, méxico, telegram, whatsapp, el mago, mega ofertas" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="El Mago Mega Ofertas" />
- 
+
   <!-- Open Graph (WhatsApp / Facebook / Telegram preview) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mega Ofertas — El Mago" />
@@ -19,22 +19,22 @@
   <meta property="og:image:width" content="512" />
   <meta property="og:image:height" content="512" />
   <meta property="og:locale" content="es_MX" />
- 
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="🧙‍♂️ El Mago de las Ofertas" />
   <meta name="twitter:description" content="Revelamos las mejores ofertas antes que nadie." />
   <meta name="twitter:image" content="https://megaofertasoficial.mx/logo.png" />
- 
+
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="canonical" href="https://megaofertasoficial.mx/" />
- 
+
   <title>🧙‍♂️ El Mago de las Ofertas — Revelamos las mejores ofertas antes que nadie</title>
- 
+
   <style>
     *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
     :root {
       --bg-page: #0F0F12;
       --bg-card: #1A1A1F;
@@ -44,7 +44,7 @@
       --text-secondary: #A8A8B0;
       --text-muted: #888892;
       --text-faint: #5C5C66;
- 
+
       /* Brand colors */
       --c-telegram: #229ED9;
       --c-instagram-1: #F58529;
@@ -55,11 +55,11 @@
       --c-tiktok-bg: #010101;
       --c-tiktok-cyan: #25F4EE;
       --c-tiktok-pink: #FE2C55;
- 
+
       --radius-btn: 14px;
       --radius-card: 20px;
     }
- 
+
     html, body {
       background: var(--bg-page);
       color: var(--text-primary);
@@ -70,7 +70,7 @@
       min-height: 100dvh;
       overflow-x: hidden;
     }
- 
+
     /* subtle radial glow background */
     body::before {
       content: "";
@@ -82,7 +82,7 @@
       pointer-events: none;
       z-index: 0;
     }
- 
+
     .page {
       position: relative;
       z-index: 1;
@@ -95,13 +95,13 @@
       display: flex;
       flex-direction: column;
     }
- 
+
     /* HEADER */
     .header {
       text-align: center;
       margin-bottom: 28px;
     }
- 
+
     .logo {
       width: 130px;
       height: 130px;
@@ -112,9 +112,9 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease;
     }
- 
+
     .logo:hover { transform: scale(1.04); }
- 
+
     .tagline {
       font-size: 15px;
       color: var(--text-secondary);
@@ -123,7 +123,7 @@
       padding: 0 12px;
       font-weight: 400;
     }
- 
+
     /* STATS */
     .stats {
       display: grid;
@@ -131,7 +131,7 @@
       gap: 10px;
       margin-bottom: 28px;
     }
- 
+
     .stat {
       background: var(--bg-stat);
       border-radius: 14px;
@@ -139,14 +139,14 @@
       text-align: center;
       border: 1px solid var(--border-soft);
     }
- 
+
     .stat-num {
       font-size: 20px;
       font-weight: 600;
       color: var(--text-primary);
       line-height: 1;
     }
- 
+
     .stat-label {
       font-size: 11px;
       color: var(--text-muted);
@@ -154,7 +154,7 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
- 
+
     /* LINKS */
     .links {
       display: flex;
@@ -162,7 +162,7 @@
       gap: 12px;
       flex: 1;
     }
- 
+
     .link {
       display: flex;
       align-items: center;
@@ -178,16 +178,16 @@
       position: relative;
       overflow: hidden;
     }
- 
+
     .link:active {
       transform: scale(0.98);
     }
- 
+
     .link:hover {
       filter: brightness(1.1);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
- 
+
     .link-icon {
       width: 26px;
       height: 26px;
@@ -196,32 +196,32 @@
       align-items: center;
       justify-content: center;
     }
- 
+
     .link-icon svg {
       width: 100%;
       height: 100%;
       fill: currentColor;
     }
- 
+
     .link-label {
       flex: 1;
       text-align: left;
     }
- 
+
     .link-arrow {
       width: 18px;
       height: 18px;
       opacity: 0.7;
       flex-shrink: 0;
     }
- 
+
     /* Brand backgrounds */
     .link-telegram  { background: var(--c-telegram); }
     .link-instagram { background: linear-gradient(135deg, var(--c-instagram-1) 0%, var(--c-instagram-2) 50%, var(--c-instagram-3) 100%); }
     .link-facebook  { background: var(--c-facebook); }
     .link-whatsapp  { background: var(--c-whatsapp); }
     .link-tiktok    { background: var(--c-tiktok-bg); border: 1px solid var(--border-soft); }
- 
+
     /* ╔══════════════════════════════════════════════╗
        ║  TELEGRAM DESTACADO — "preferido por usuarios" ║
        ╚══════════════════════════════════════════════╝ */
@@ -238,7 +238,7 @@
       padding-bottom: 16px;
       min-height: 64px;
     }
- 
+
     /* Animación de "salto" / latido sutil hacia el usuario */
     @keyframes featuredPulse {
       0%, 100% {
@@ -256,7 +256,7 @@
           0 12px 28px rgba(34, 158, 217, 0.5);
       }
     }
- 
+
     /* Badge "preferido por los usuarios" — DENTRO del botón, esquina superior derecha */
     .badge-featured {
       position: absolute;
@@ -275,12 +275,12 @@
       z-index: 2;
       line-height: 1.2;
     }
- 
+
     /* No pulsar si el usuario prefiere menos movimiento (accesibilidad) */
     @media (prefers-reduced-motion: reduce) {
       .link-featured { animation: none; }
     }
- 
+
     /* FOOTER */
     .footer {
       text-align: center;
@@ -288,19 +288,19 @@
       padding-top: 20px;
       border-top: 1px solid var(--border-soft);
     }
- 
+
     .footer p {
       font-size: 12px;
       color: var(--text-faint);
       line-height: 1.6;
     }
- 
+
     .footer-domain {
       color: var(--text-muted);
       font-weight: 500;
       margin-bottom: 4px;
     }
- 
+
     /* In-app browser warning (Instagram/TikTok/FB internal) */
     .browser-warning {
       display: none;
@@ -314,7 +314,7 @@
       margin-bottom: 20px;
       line-height: 1.4;
     }
- 
+
     /* Small phones */
     @media (max-width: 360px) {
       .page { padding: 24px 16px 20px; }
@@ -322,14 +322,14 @@
       .link { font-size: 15px; padding: 14px 16px; }
       .stat-num { font-size: 18px; }
     }
- 
+
     /* Tablet / desktop — keep mobile feel but breathe */
     @media (min-width: 540px) {
       .page { padding: 48px 24px 32px; }
       .logo { width: 150px; height: 150px; }
       .tagline { font-size: 16px; }
     }
- 
+
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { transition: none !important; animation: none !important; }
@@ -337,20 +337,20 @@
   </style>
 </head>
 <body>
- 
+
   <main class="page">
- 
+
     <!-- In-app browser warning (auto-shown via JS if detected) -->
     <div class="browser-warning" id="browserWarning">
       Para mejor experiencia abre en tu navegador: toca <strong>⋮</strong> arriba → <strong>"Abrir en navegador"</strong>
     </div>
- 
+
     <!-- HEADER -->
     <header class="header">
       <img src="/logo.png" alt="El Mago Mega Ofertas" class="logo" width="130" height="130" />
       <p class="tagline">Revelamos las mejores ofertas antes que nadie</p>
     </header>
- 
+
     <!-- STATS -->
     <section class="stats" aria-label="Estadísticas del canal">
       <div class="stat">
@@ -366,10 +366,10 @@
         <div class="stat-label">activos</div>
       </div>
     </section>
- 
+
     <!-- LINKS -->
     <nav class="links" aria-label="Canales sociales">
- 
+
       <!-- TELEGRAM (destacado) -->
       <a class="link link-telegram link-featured" href="https://t.me/ofertasdelmercadolibre" target="_blank" rel="noopener" aria-label="Únete al canal de Telegram - preferido por los usuarios">
         <span class="badge-featured" aria-hidden="true">★ Más usado</span>
@@ -379,7 +379,7 @@
         <span class="link-label">Telegram</span>
         <svg class="link-arrow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </a>
- 
+
       <!-- INSTAGRAM -->
       <a class="link link-instagram" href="https://www.instagram.com/elmagolibre/" target="_blank" rel="noopener" aria-label="Síguenos en Instagram">
         <span class="link-icon" aria-hidden="true">
@@ -388,7 +388,7 @@
         <span class="link-label">Instagram</span>
         <svg class="link-arrow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </a>
- 
+
       <!-- FACEBOOK -->
       <a class="link link-facebook" href="https://www.facebook.com/share/18Pyu5ULBZ/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Síguenos en Facebook">
         <span class="link-icon" aria-hidden="true">
@@ -397,7 +397,7 @@
         <span class="link-label">Facebook</span>
         <svg class="link-arrow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </a>
- 
+
       <!-- WHATSAPP -->
       <a class="link link-whatsapp" href="https://whatsapp.com/channel/0029VbBF6Bc7DAWvQL2T9c1o" target="_blank" rel="noopener" aria-label="Únete al canal de WhatsApp">
         <span class="link-icon" aria-hidden="true">
@@ -406,7 +406,7 @@
         <span class="link-label">WhatsApp</span>
         <svg class="link-arrow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </a>
- 
+
       <!-- TIKTOK -->
       <a class="link link-tiktok" href="https://www.tiktok.com/@el_magolibre" target="_blank" rel="noopener" aria-label="Síguenos en TikTok">
         <span class="link-icon" aria-hidden="true">
@@ -415,17 +415,17 @@
         <span class="link-label">TikTok</span>
         <svg class="link-arrow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </a>
- 
+
     </nav>
- 
+
     <!-- FOOTER -->
     <footer class="footer">
       <p class="footer-domain">megaofertasoficial.mx</p>
       <p>© 2026 Mega Ofertas · Todos los derechos reservados</p>
     </footer>
- 
+
   </main>
- 
+
   <script>
     // Detectar in-app browsers (Instagram, TikTok, Facebook internal) y mostrar aviso
     (function() {
@@ -438,6 +438,10 @@
       }
     })();
   </script>
- 
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "630c0b4f14af4abd9568fa3aec5df8ac"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>
